@@ -197,16 +197,16 @@ h2.st.light em{color:var(--plum-xl);}
 
 /* ── TESTIMONIALS ── */
 .testi-section{padding:100px 0;background:var(--warm);}
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
-.testi-card{background:var(--white);border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;}
+.testi-card{background:var(--white);border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;padding-top:52px;position:relative;margin-top:44px;}
 .testi-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
-.testi-photo{width:100%;height:240px;object-fit:cover;object-position:center 15%;display:block;}
-.testi-accent{height:4px;width:100%;flex-shrink:0;}
-.testi-body{padding:24px 28px 28px;display:flex;flex-direction:column;flex:1;}
-.testi-phase-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:12px;margin-bottom:12px;align-self:flex-start;}
-.testi-stars{color:var(--gold-l);font-size:14px;letter-spacing:3px;margin-bottom:14px;}
-.testi-quote{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;font-style:italic;color:var(--text-2);line-height:1.65;margin-bottom:20px;flex:1;}
-.testi-person{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--border);padding-top:14px;margin-top:auto;}
+.testi-accent{height:4px;width:100%;border-radius:var(--r) var(--r) 0 0;position:absolute;top:0;left:0;right:0;}
+.testi-avatar{width:88px;height:88px;border-radius:50%;object-fit:cover;object-position:center top;position:absolute;top:-44px;left:50%;transform:translateX(-50%);border:4px solid var(--white);box-shadow:0 4px 16px rgba(22,17,30,.18);}
+.testi-body{padding:8px 24px 24px;display:flex;flex-direction:column;flex:1;text-align:center;}
+.testi-phase-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:12px;margin-bottom:10px;align-self:center;}
+.testi-stars{color:var(--gold-l);font-size:14px;letter-spacing:3px;margin-bottom:12px;}
+.testi-quote{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;font-style:italic;color:var(--text-2);line-height:1.65;margin-bottom:16px;flex:1;text-align:left;}
+.testi-person{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--border);padding-top:12px;margin-top:auto;align-items:center;}
 .testi-name{font-size:13.5px;font-weight:600;color:var(--text);}
 .testi-detail{font-size:12px;color:var(--muted);}
 
@@ -266,6 +266,10 @@ h2.st.light em{color:var(--plum-xl);}
 .form-submit{padding:13px 24px;border-radius:10px;background:#fff;color:var(--plum);border:none;font-size:13.5px;font-weight:700;transition:all .2s;}
 .form-submit:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,.12);}
 .form-note{font-size:11px;color:rgba(200,188,220,.4);margin-top:10px;text-align:center;}
+.guide-access-box{background:rgba(255,255,255,.08);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:36px 32px;text-align:center;}
+.guide-access-box h4{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:#f0e8f8;margin-bottom:8px;}
+.guide-access-box h4 em{font-style:italic;color:#c4a0e0;}
+.guide-access-box p{font-size:13.5px;color:rgba(200,188,220,.65);margin-bottom:24px;line-height:1.6;}
 
 /* ── PROGRAMS PREVIEW ── */
 .programs-section{padding:100px 0;background:var(--cream);}
@@ -277,8 +281,8 @@ h2.st.light em{color:var(--plum-xl);}
 .prog-badge{position:absolute;top:20px;right:20px;font-size:10px;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;}
 .prog-top h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--text);margin-bottom:8px;}
 .prog-top p{font-size:13.5px;color:var(--text-3);line-height:1.7;}
-.prog-bottom{padding:18px 26px 26px;border-top:1px solid var(--border);}
-.prog-price{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--plum);margin-bottom:14px;}
+.prog-bottom{padding:16px 26px 26px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px;}
+.prog-price{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--plum);margin-bottom:2px;}
 .prog-price span{font-size:14px;font-weight:400;color:var(--muted);}
 
 /* ── CONSULTATION ── */
@@ -348,7 +352,8 @@ h2.st.light em{color:var(--plum-xl);}
   .sym-grid{grid-template-columns:repeat(2,1fr);}
   .programs-grid{grid-template-columns:1fr;}
   .testi-grid{grid-template-columns:1fr;}
-  .cta-band-inner{grid-template-columns:1fr;gap:32px;}
+  .testi-card{margin-top:44px;}
+    .cta-band-inner{grid-template-columns:1fr;gap:32px;}
   /* About */
   .about-inner{grid-template-columns:1fr;gap:32px;}
   .about-photo-wrap{max-width:220px;margin:0 auto;}
@@ -365,8 +370,7 @@ h2.st.light em{color:var(--plum-xl);}
   .pb-col h4{font-size:22px;}
   .hiw-step p{font-size:15px;line-height:1.75;}
   .hiw-step h4{font-size:22px;}
-  .testi-photo{height:260px;}
-  .testi-quote{font-size:19px;line-height:1.65;}
+    .testi-quote{font-size:19px;line-height:1.65;}
   .testi-name{font-size:15px;}
   .testi-detail{font-size:13px;}
   .testi-phase-badge{font-size:12px;padding:5px 12px;}
@@ -783,8 +787,8 @@ h2.st.light em{color:var(--plum-xl);}
       </div>
       <div class="hiw-step">
         <div class="hiw-num">2</div>
-        <h4>Book Your Consultation</h4>
-        <p>Join a free 30-minute discovery call with your Thrive Phase coach. We'll review your quiz results, discuss your health history, and identify the root imbalances affecting your wellbeing.</p>
+        <h4>Book Your Consult</h4>
+        <p>Join a free 15-minute discovery call with your Thrive Phase coach. We'll review your quiz results, discuss your health history, and identify the root imbalances affecting your wellbeing.</p>
       </div>
       <div class="hiw-step">
         <div class="hiw-num">3</div>
@@ -815,8 +819,8 @@ h2.st.light em{color:var(--plum-xl);}
     <div class="testi-grid">
 
       <div class="testi-card">
-        <img class="testi-photo" src="Maya_D.png" alt="Maya D."/>
         <div class="testi-accent" style="background:var(--teal);"></div>
+        <img class="testi-avatar" src="Maya_D.png" alt="Maya D."/>
         <div class="testi-body">
           <span class="testi-phase-badge" style="background:var(--teal-pale);color:var(--teal);">🌱 Reproductive Phase</span>
           <div class="testi-stars">★★★★★</div>
@@ -826,8 +830,8 @@ h2.st.light em{color:var(--plum-xl);}
       </div>
 
       <div class="testi-card">
-        <img class="testi-photo" src="Amara_O.png" alt="Amara O."/>
         <div class="testi-accent" style="background:var(--sage);"></div>
+        <img class="testi-avatar" src="Amara_O.png" alt="Amara O."/>
         <div class="testi-body">
           <span class="testi-phase-badge" style="background:var(--sage-pale);color:var(--sage);">🌱 Reproductive Phase</span>
           <div class="testi-stars">★★★★★</div>
@@ -837,41 +841,41 @@ h2.st.light em{color:var(--plum-xl);}
       </div>
 
       <div class="testi-card">
-        <img class="testi-photo" src="Sandra_K.png" alt="Sandra K."/>
         <div class="testi-accent" style="background:var(--gold);"></div>
+        <img class="testi-avatar" src="Sandra_K.png" alt="Sandra K."/>
         <div class="testi-body">
           <span class="testi-phase-badge" style="background:var(--gold-pale);color:var(--gold);">🌙 Perimenopausal Phase</span>
           <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"I gained 22 pounds in one year eating exactly the same way I always had. I was exercising more and gaining faster. Thrive Phase explained the cortisol connection — I was making it worse. Three months later I've lost 18 pounds and I sleep through the night again."</p>
+          <p class="testi-quote">"I gained 22 pounds in one year eating exactly the same way I always had. Thrive Phase explained the cortisol connection — I was making it worse. Three months later I've lost 18 pounds and I sleep through the night again."</p>
           <div class="testi-person"><div class="testi-name">Sandra K.</div><div class="testi-detail">43 · Houston, TX</div></div>
         </div>
       </div>
 
       <div class="testi-card">
-        <img class="testi-photo" src="Priya_N.png" alt="Priya N."/>
         <div class="testi-accent" style="background:var(--plum);"></div>
+        <img class="testi-avatar" src="Priya_N.png" alt="Priya N."/>
         <div class="testi-body">
           <span class="testi-phase-badge" style="background:var(--plum-pale);color:var(--plum);">🌙 Perimenopausal Phase</span>
           <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"The anxiety hit me at 41 with no warning. I thought I was losing my mind. Thrive Phase showed me it was progesterone decline. The somatic exercises and herbal protocol gave me my calm back within weeks. I feel like myself again — but better."</p>
+          <p class="testi-quote">"The anxiety hit me at 41 with no warning. Thrive Phase showed me it was progesterone decline. The somatic exercises and herbal protocol gave me my calm back within weeks. I feel like myself again — but better."</p>
           <div class="testi-person"><div class="testi-name">Priya N.</div><div class="testi-detail">41 · Dallas, TX</div></div>
         </div>
       </div>
 
       <div class="testi-card">
-        <img class="testi-photo" src="Cameren_L.png" alt="Carmen L."/>
         <div class="testi-accent" style="background:var(--rose);"></div>
+        <img class="testi-avatar" src="Cameren_L.png" alt="Carmen L."/>
         <div class="testi-body">
           <span class="testi-phase-badge" style="background:var(--rose-pale);color:var(--rose);">✨ Menopausal Phase</span>
           <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"At 54 I thought my best years were behind me. My doctor offered antidepressants. Thrive Phase offered a complete strategy for this chapter of my life. Six months later: no night sweats, strong bones, and more energy than I had at 40. Menopause is not what I feared."</p>
+          <p class="testi-quote">"At 54 I thought my best years were behind me. Thrive Phase offered a complete strategy for this chapter of my life. Six months later: no night sweats, strong bones, and more energy than I had at 40. Menopause is not what I feared."</p>
           <div class="testi-person"><div class="testi-name">Carmen L.</div><div class="testi-detail">54 · Miami, FL</div></div>
         </div>
       </div>
 
       <div class="testi-card">
-        <img class="testi-photo" src="Tamara_J.png" alt="Tamara J."/>
         <div class="testi-accent" style="background:#8b5cb8;"></div>
+        <img class="testi-avatar" src="Tamara_J.png" alt="Tamara J."/>
         <div class="testi-body">
           <span class="testi-phase-badge" style="background:var(--rose-pale);color:var(--rose);">✨ Menopausal Phase</span>
           <div class="testi-stars">★★★★★</div>
@@ -881,7 +885,7 @@ h2.st.light em{color:var(--plum-xl);}
       </div>
 
     </div>
-    <p style="text-align:center;font-size:11.5px;color:var(--muted);margin-top:24px;font-style:italic;">* Actual clients. Results reflect individual participation. Results may vary. Testimonials used with written permission.</p>
+    <p style="text-align:center;font-size:11.5px;color:var(--muted);margin-top:36px;font-style:italic;">* Actual clients. Results reflect individual participation. Results may vary. Testimonials used with written permission.</p>
   </div>
 </section>
 
@@ -1079,59 +1083,67 @@ h2.st.light em{color:var(--plum-xl);}
       <p class="sec-sub">Every Thrive Phase program is built on the same evidence-based system — tailored to your hormonal phase, your body, and your life.</p>
     </div>
     <div class="programs-grid">
+
       <div class="prog-card">
         <div class="prog-top">
           <div class="prog-icon" style="background:rgba(58,152,152,.1);">🌱</div>
-          <div class="prog-badge" style="background:var(--teal-pale);color:var(--teal);">Ages 20s–30s</div>
+          <div class="prog-badge" style="background:var(--teal-pale);color:var(--teal);">Reproductive Years</div>
           <h3>Reproductive Phase Reset</h3>
           <p>Cycle syncing, PMS relief, PCOS support, cortisol management, and fertility preparation. Understand your body and optimize every phase of your cycle.</p>
         </div>
         <div class="prog-bottom">
-          <div class="prog-price">$197 <span>· Founding price</span></div>
-          <a href="https://calendly.com/stephanielopezgilmore-79zf/30min" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;border-color:var(--teal);color:var(--teal);">Book a Consultation →</a>
+          <div class="prog-price">$197</div>
+          <a href="https://calendly.com/stephanielopezgilmore-79zf/30min" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;border-color:var(--teal);color:var(--teal);">Book a Consult →</a>
+          <a href="https://payhip.com/b/GQ6Wz" target="_blank" class="btn" style="width:100%;justify-content:center;background:var(--teal);color:#fff;">Purchase Now →</a>
         </div>
       </div>
+
       <div class="prog-card" style="border-color:var(--plum);box-shadow:0 8px 40px rgba(92,45,130,.2);">
         <div class="prog-top" style="background:linear-gradient(160deg,rgba(92,45,130,.04),rgba(168,48,88,.04));">
           <div class="prog-icon" style="background:rgba(92,45,130,.1);">🌙</div>
-          <div class="prog-badge" style="background:var(--plum);color:#fff;">⭐ Most Popular</div>
+          <div class="prog-badge" style="background:var(--plum);color:#fff;">⭐ Perimenopause Transition</div>
           <h3>Perimenopause Hormone Reset</h3>
           <p>The complete 28-day perimenopausal protocol — nutrition, workouts, cycle syncing, somatic healing, essential oils, and habit tracking. IUD and HRT adaptations included.</p>
         </div>
         <div class="prog-bottom">
-          <div class="prog-price" style="color:var(--plum);">$197 <span>· Founding price</span></div>
-          <a href="https://calendly.com/stephanielopezgilmore-79zf/30min" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Book a Consultation →</a>
+          <div class="prog-price" style="color:var(--plum);">$197</div>
+          <a href="https://calendly.com/stephanielopezgilmore-79zf/30min" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;">Book a Consult →</a>
+          <a href="https://payhip.com/b/JHyIf" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Purchase Now →</a>
         </div>
       </div>
+
       <div class="prog-card">
         <div class="prog-top">
           <div class="prog-icon" style="background:rgba(168,48,88,.1);">✨</div>
-          <div class="prog-badge" style="background:var(--rose-pale);color:var(--rose);">Ages 50s+</div>
+          <div class="prog-badge" style="background:var(--rose-pale);color:var(--rose);">Menopausal Renaissance</div>
           <h3>Menopausal Renaissance Program</h3>
           <p>Bone health, brain protection, metabolic vitality, and emotional renaissance for the most powerful chapter of your life. Build the foundation for the next 30 years.</p>
         </div>
         <div class="prog-bottom">
-          <div class="prog-price">$197 <span>· Founding price</span></div>
-          <a href="https://calendly.com/stephanielopezgilmore-79zf/30min" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;border-color:var(--rose);color:var(--rose);">Book a Consultation →</a>
+          <div class="prog-price">$197</div>
+          <a href="https://calendly.com/stephanielopezgilmore-79zf/30min" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;border-color:var(--rose);color:var(--rose);">Book a Consult →</a>
+          <a href="https://payhip.com/b/jFJWq" target="_blank" class="btn" style="width:100%;justify-content:center;background:var(--rose);color:#fff;">Purchase Now →</a>
         </div>
       </div>
+
       <div class="prog-card" style="border-color:var(--gold);">
         <div class="prog-top" style="background:linear-gradient(160deg,rgba(160,112,32,.04),rgba(201,169,110,.06));">
           <div class="prog-icon" style="background:rgba(160,112,32,.1);">💎</div>
           <div class="prog-badge" style="background:linear-gradient(135deg,var(--gold),var(--gold-l));color:#fff;">Premium</div>
           <h3>VIP 1:1 Coaching</h3>
           <p>Fully personalized 3-month private coaching. Your biology, your life, your timeline. The deepest level of support and the most profound transformation.</p>
-        </div>
-        <div class="prog-bottom">
-          <div class="prog-price" style="color:var(--gold);">$1,500 <span>· 3 months</span></div>
-          <ul style="list-style:none;margin-bottom:16px;">
+          <ul style="list-style:none;margin-top:14px;">
             <li style="font-size:13px;color:var(--text-3);padding:4px 0;display:flex;gap:8px;"><span style="color:var(--gold);">✦</span>Bi-weekly 60-min 1:1 sessions</li>
             <li style="font-size:13px;color:var(--text-3);padding:4px 0;display:flex;gap:8px;"><span style="color:var(--gold);">✦</span>Unlimited Voxer support Mon–Fri</li>
             <li style="font-size:13px;color:var(--text-3);padding:4px 0;display:flex;gap:8px;"><span style="color:var(--gold);">✦</span>Personalized hormone protocol</li>
           </ul>
-          <a href="https://calendly.com/stephanielopezgilmore-79zf/30min" target="_blank" class="btn btn-gold btn-arrow" style="width:100%;justify-content:center;">Apply Now</a>
+        </div>
+        <div class="prog-bottom">
+          <div class="prog-price" style="color:var(--gold);">$1,500 <span style="font-size:14px;color:var(--muted);">· 3 months</span></div>
+          <a href="https://calendly.com/stephanielopezgilmore-79zf/30min" target="_blank" class="btn btn-gold btn-arrow" style="width:100%;justify-content:center;">Book a Consult →</a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -1150,9 +1162,9 @@ h2.st.light em{color:var(--plum-xl);}
         <span class="eyebrow">Free Discovery Call</span>
         <h2 class="st">Ready to Start Your<br><em>Hormonal Reset?</em></h2>
         <div class="rule"></div>
-        <p style="margin-top:16px;">Your free 30-minute consultation is a personalized conversation — not a sales call. We'll review your hormone quiz results, discuss your symptoms and history, and together identify the path forward that's right for your phase, your body, and your life.</p>
+        <p style="margin-top:16px;">Your free 15-minute consultation is a personalized conversation — not a sales call. We'll review your hormone quiz results, discuss your symptoms and history, and together identify the path forward that's right for your phase, your body, and your life.</p>
         <ul class="consult-points">
-          <li><span class="cp-check">✓</span>30 minutes · Free · No obligation · Virtual or phone</li>
+          <li><span class="cp-check">✓</span>15 minutes · Free · No obligation · Virtual or phone</li>
           <li><span class="cp-check">✓</span>Review your hormone quiz results together</li>
           <li><span class="cp-check">✓</span>Identify your primary imbalances and root causes</li>
           <li><span class="cp-check">✓</span>Learn which program or approach is right for your phase</li>
@@ -1205,20 +1217,11 @@ h2.st.light em{color:var(--plum-xl);}
         <h2>Start Your Reset with the<br><em>Free 5-Day Guide</em></h2>
         <p>The complete introduction to hormonal health coaching — nutrition basics, cycle syncing, somatic exercises, and the hormone quiz in one free download. No commitment required.</p>
       </div>
-      <div class="cta-band-form">
-        <h4>Send Me the <em>Free Guide</em></h4>
-        <p>Join 1,800+ women on their hormonal reset journey</p>
-        <!-- EDIT: Update form action to your email platform -->
-        <form onsubmit="handleEmailForm(event)">
-          <div class="form-row" style="margin-bottom:10px;">
-            <input type="text" class="form-input" placeholder="First name" required>
-          </div>
-          <div class="form-row">
-            <input type="email" class="form-input" placeholder="Email address" required>
-            <button type="submit" class="form-submit">Send It →</button>
-          </div>
-        </form>
-        <p class="form-note">🔒 No spam. Unsubscribe anytime.</p>
+      <div class="guide-access-box">
+        <h4>Your Free <em>Hormone Reset Guide</em></h4>
+        <p>Instant access — no waiting, no spam. Just click below and start your hormonal reset today.</p>
+        <a href="https://payhip.com/b/0lALz" target="_blank" class="btn btn-gold btn-arrow" style="width:100%;justify-content:center;font-size:16px;padding:16px 36px;">Access Free Guide</a>
+        <p style="font-size:11.5px;color:rgba(200,188,220,.4);margin-top:12px;">🔒 Free · Instant download · No credit card required</p>
       </div>
     </div>
   </div>
@@ -1286,7 +1289,23 @@ function closeMob(){document.getElementById('mobNav').classList.remove('open');d
 // Email form
 function handleEmailForm(e){
   e.preventDefault();
-  if(e && e.target) e.target.reset();
+  const form = e.target;
+  const nameInput = form.querySelector('input[type="text"]');
+  const emailInput = form.querySelector('input[type="email"]');
+  const name  = nameInput ? nameInput.value.trim() : '';
+  const email = emailInput ? emailInput.value.trim() : '';
+  if(!email || !email.includes('@')) return;
+
+  // Send to MailerLite — Lead Magnet group
+  fetch('https://connect.mailerlite.com/api/subscribers', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json','Authorization':'Bearer MAILERLITE_API_KEY'},
+    body: JSON.stringify({email:email,fields:{name:name},groups:['184124279102637866']})
+  }).then(function(){
+    form.reset();
+    const btn = form.querySelector('button[type="submit"]');
+    if(btn){ btn.textContent = "You're in! ✓"; btn.style.background='#386040'; }
+  }).catch(function(){});
 }
 
 // ── QUIZ LOGIC ──
@@ -1329,7 +1348,6 @@ function showQuizResult(){
   const email = document.getElementById('quizEmail').value.trim();
   if(!email || !email.includes('@')){alert('Please enter a valid email address.');return;}
 
-  // Calculate score
   const total = answers.reduce((s,v)=>s+(v||0),0);
   const maxScore = (totalQ-1)*3;
   const pct = Math.round((total/maxScore)*100);
@@ -1340,13 +1358,13 @@ function showQuizResult(){
   let label, desc;
   if(pct < 30){
     label='Mild Hormonal Fluctuations';
-    desc='Your hormones show mild signs of imbalance. With targeted nutrition, lifestyle adjustments, and cycle awareness, you can optimize your hormonal health and prevent symptoms from escalating. A free consultation will help you lock in what\'s working and strengthen what\'s not.';
+    desc='Your hormones show mild signs of imbalance. With targeted nutrition, lifestyle adjustments, and cycle awareness, you can optimize your hormonal health and prevent symptoms from escalating.';
   } else if(pct < 60){
     label='Moderate Hormone Imbalance Detected';
-    desc='Your responses indicate moderate hormonal imbalance across several areas. This is very common — and very addressable with the right support. Your personalized action plan is on its way to your inbox. A free consultation will help us build your complete protocol.';
+    desc='Your responses indicate moderate hormonal imbalance across several areas. This is very common and very addressable with the right support. Your personalized action plan is on its way to your inbox.';
   } else {
     label='Significant Hormone Imbalance — Support Needed';
-    desc='Your responses suggest significant hormonal dysregulation that is very likely affecting your daily life, energy, and wellbeing. The good news: this is exactly what Thrive Phase coaching is designed for. Your full action plan is in your inbox — please book a consultation so we can start your reset together.';
+    desc='Your responses suggest significant hormonal dysregulation affecting your daily life, energy, and wellbeing. This is exactly what Thrive Phase coaching is designed for. Your full action plan is in your inbox.';
   }
 
   if(scoreEl) scoreEl.textContent = pct+'%';
@@ -1360,10 +1378,15 @@ function showQuizResult(){
   const bar2 = document.getElementById('quizBar');
   if(bar2) bar2.style.width='100%';
 
-  // EDIT: Connect to your email platform here
-  // fetch('YOUR_EMAIL_ENDPOINT',{method:'POST',body:JSON.stringify({name,email,score:pct,answers})});
+  // Send to MailerLite — Hormone Quiz group
+  fetch('https://connect.mailerlite.com/api/subscribers', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json','Authorization':'Bearer MAILERLITE_API_KEY'},
+    body: JSON.stringify({email:email,fields:{name:name},groups:['185474478091797852']})
+  }).catch(function(){});
 }
 
 </script>
+<script src='https://cdn.jotfor.ms/agent/embedjs/019db601e6b3753f93d37469ef2255efe4be/embed.js'></script>
 </body>
 </html>
